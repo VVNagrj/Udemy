@@ -1,8 +1,8 @@
 <app-server></app-server>
 <app-server></app-server>
 
-<p>{{StringInter}}</p>
-<p [innerHTML]="PropertyBinding"></p>
+<!-- <p>{{StringInter}}</p>
+<p [innerHTML]="PropertyBinding"></p> -->
 
 <button 
     [disabled]="!PropertyBindingEg" 
@@ -21,5 +21,11 @@
 <label>Server Name</label>
 <input 
         type="text" 
-        [(ngModel)]="serverName"
+        [(ngModel)]="StringInter"
         class="form-control">
+
+<p *ngIf="serverCreated; else NoServerCreated">{{serverName}}</p>
+
+<ng-template #NoServerCreated>
+    <p>No Server Created !</p>
+</ng-template>
