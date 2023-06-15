@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServersComponent implements OnInit {
 
-  constructor() { }
+  StringInter = 'StringInter' 
+  PropertyBinding = 'PropertyBinding' 
+  PropertyBindingEg = false
 
-  ngOnInit(): void {
+  constructor() { 
+    setTimeout(() => {
+      this.PropertyBindingEg = true
+    }, 2000);
   }
+
+  ngOnInit(): void {}
+
+  
 
 }
