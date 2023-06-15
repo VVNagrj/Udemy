@@ -10,6 +10,7 @@ export class ServersComponent implements OnInit {
   StringInter = 'StringInter' 
   PropertyBinding = 'PropertyBinding' 
   PropertyBindingEg = false
+  serverName : any 
 
   constructor() { 
     setTimeout(() => {
@@ -20,12 +21,12 @@ export class ServersComponent implements OnInit {
   ngOnInit(): void {}
 
   onServerClick() {
-    this.StringInter = "Server Created"
+    this.StringInter = "Server Created Name of Sever is " + this.serverName
   }
 
   onUpdateServer(event : Event) {
     console.log((<HTMLInputElement>event.target).value)
-    this.StringInter = (<HTMLInputElement>event.target).value
+    this.serverName = (<HTMLInputElement>event.target).value
   }   
 
 }
