@@ -22,6 +22,10 @@ export class ServersComponent implements OnInit {
   onServerClick() {
     this.StringInter = "Server Created"
   }
-  
+
+  onUpdateServer(event : Event) {
+    console.log((<HTMLInputElement>event.target).value)
+    this.StringInter = (<HTMLInputElement>event.target).value
+  }   
 
 }
