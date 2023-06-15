@@ -19,6 +19,9 @@ export class ServersComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  onServerClick() {
+    this.StringInter = "Server Created"
+  }
   
 
 }
