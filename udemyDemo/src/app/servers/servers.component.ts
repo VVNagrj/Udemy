@@ -13,6 +13,8 @@ export class ServersComponent implements OnInit {
   serverName : any 
   serverCreated = false
 
+  servers = ['Test','Test 1']
+
   constructor() { 
     setTimeout(() => {
       this.PropertyBindingEg = true
